@@ -16072,31 +16072,19 @@ var _Sources = (() => {
       });
       const response = await this.requestManager.schedule(request, 1);
       const $2 = load(response.data);
-      
       let parseSlug;
-      
-      // Attempt to get the slug from og:url
       parseSlug = String($2('meta[property="og:url"]').attr("content"));
-      console.log("og:url:", parseSlug); // Log the og:url for debugging
-    
-      // If og:url is not found, try canonical link
       if (!parseSlug.includes(this.baseUrl)) {
         parseSlug = String($2('link[rel="canonical"]').attr("href"));
-        console.log("canonical link:", parseSlug); // Log the canonical link for debugging
       }
-      
-      // If neither og:url nor canonical link found, throw error
       if (!parseSlug || !parseSlug.includes(this.baseUrl)) {
         throw new Error("Unable to parse slug!");
       }
-    
-      // Clean and extract the slug
       parseSlug = parseSlug.replace(/\/$/, "").split("/");
       const slug = parseSlug.slice(-1).pop();
       const path = parseSlug.slice(-2).shift();
-      
       return { path, slug };
-    }    
+    } 
     async convertSlugToPostId(slug, path) {
       const headRequest = App.createRequest({
         url: `${this.baseUrl}/${path}/${slug}`,
