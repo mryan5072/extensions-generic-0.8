@@ -33,7 +33,6 @@ export const MangaDistrictInfo: SourceInfo = {
 export class MangaDistrict extends Madara {
 
     baseUrl: string = DOMAIN
-    override directoryPath = 'read-scan'
 
     override chapterEndpoint = 1
 
