@@ -16146,7 +16146,7 @@ Please go to the homepage of <${this.baseUrl}> and press the cloud icon.`);
   };
 
   // src/MangaDistrict/MangaDistrict.ts
-  var DOMAIN = "https://MangaDistrict.com";
+  var DOMAIN = "https://mangadistrict.com";
   var MangaDistrictInfo = {
     version: getExportVersion("0.0.2"),
     name: "MangaDistrict",
@@ -16163,7 +16163,7 @@ Please go to the homepage of <${this.baseUrl}> and press the cloud icon.`);
     constructor() {
       super(...arguments);
       this.baseUrl = DOMAIN;
-      this.chapterEndpoint = 1;
+      this.chapterEndpoint = 2;
       this.chapterDetailsSelector = "li.blocks-gallery-item > figure > img, div.page-break > img, div#chapter-video-frame > p > img, div.text-left > p > img";
     }
     async getHomePageSections(sectionCallback) {
