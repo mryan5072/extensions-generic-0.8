@@ -15776,7 +15776,7 @@ var _Sources = (() => {
       /**
        * When not using postIds, you need to set the directory path
        */
-      this.directoryPath = "read-scan";
+      this.directoryPath = "manga";
       /**
        * Some sources may redirect to the manga page instead of the chapter page if adding the parameter '?style=list'
        */
