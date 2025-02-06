@@ -178,7 +178,7 @@ export abstract class Madara implements SearchResultsProviding, MangaProviding, 
     /**
      * When not using postIds, you need to set the directory path
      */
-    directoryPath = 'read-scan'
+    directoryPath = 'manga'
 
     /**
      * Some sources may redirect to the manga page instead of the chapter page if adding the parameter '?style=list'
