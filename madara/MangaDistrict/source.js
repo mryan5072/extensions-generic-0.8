@@ -15657,7 +15657,7 @@ var _Sources = (() => {
   };
 
   // src/Madara.ts
-  var BASE_VERSION = "3.2.1";
+  var BASE_VERSION = "3.6.9";
   var getExportVersion = (EXTENSION_VERSION) => {
     return BASE_VERSION.split(".").map((x, index2) => Number(x) + Number(EXTENSION_VERSION.split(".")[index2])).join(".");
   };
@@ -16146,9 +16146,9 @@ Please go to the homepage of <${this.baseUrl}> and press the cloud icon.`);
   };
 
   // src/MangaDistrict/MangaDistrict.ts
-  var DOMAIN = "https://mangadistrict.com/";
+  var DOMAIN = "https://mangadistrict.com";
   var MangaDistrictInfo = {
-    version: getExportVersion("0.0.2"),
+    version: getExportVersion("0.0.10"),
     name: "MangaDistrict",
     description: `Extension that pulls manga from ${DOMAIN}`,
     author: "Netsky",
@@ -16169,7 +16169,6 @@ Please go to the homepage of <${this.baseUrl}> and press the cloud icon.`);
       super(...arguments);
       this.baseUrl = DOMAIN;
       this.chapterEndpoint = 1;
-      this.searchMangaSelector = "div.c-tabs-item > div.row";
     }
   };
   return __toCommonJS(MangaDistrict_exports);
